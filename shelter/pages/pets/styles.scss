@@ -1,0 +1,435 @@
+$color-light-xl: #FFFFFF;
+$color-light-l: #F6F6F6;
+$color-light-s: #FAFAFA;
+$color-dark-s: #CDCDCD;
+$color-dark-l: #545454;
+$color-dark-3xl: #292929;
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+@mixin logo_title {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 32px;
+        style: normal;
+    }
+    line-height: 110%;
+    letter-spacing: 2px;
+    color: $color-dark-l;
+}
+
+@mixin logo_subtitle {
+    font: {
+        family: Arial;
+        weight: normal;
+        size: 13px;
+        style: normal;
+    }
+    line-height: 110%;
+    letter-spacing: 1.3px;
+    color: $color-dark-3xl;
+}
+
+@mixin paragraph-l {
+    font: {
+        family: Arial;
+        weight: normal;
+        size: 15px;
+        style: normal;
+    }
+    line-height: 160%;
+}
+
+@mixin h3 {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 35px;
+        style: normal;
+    }
+    line-height: 130%;
+    letter-spacing: 2.1px;
+}
+
+@mixin card-name {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 20px;
+    }
+    line-height: 23px;
+    letter-spacing: 1px;
+    color: $color-dark-l;
+}
+
+@mixin button {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 17px;
+        style: normal;
+    }
+    line-height: 130%;
+    letter-spacing: 1px;
+    color: $color-dark-3xl;
+}
+
+@mixin h4 {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 20px;
+        style: normal;
+    }
+    line-height: 115%;
+    letter-spacing: 1.2px;
+}
+
+// common properties
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// header properties
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $color-light-xl;
+}
+
+.header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 120px;
+}
+
+.header__navigation {
+    max-width: 443px;
+    padding-bottom: 4px;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 443px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navigation__item {
+    display: inline-block;
+    list-style: none;
+}
+
+.logo {
+    height: 60px;
+    text-align: center;
+}
+
+.logo__title {
+    @include logo_title;
+    padding-top: 1px;
+}
+
+.logo__subtitle {
+    @include logo_subtitle;
+    margin: 10px 0 0 1px;
+}
+
+.navigation a {
+    @include paragraph-l;
+    text-decoration: none;
+    color: $color-dark-l;
+    &:hover {
+        color: $color-dark-3xl;
+    }
+}
+
+.navigation__item-active a {
+    color: $color-dark-3xl;
+    padding-bottom: 4px;
+    border-bottom: 3px solid $color-primary;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100vw;
+    }
+
+    .header .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 708px;
+        height: 120px;
+    }
+}
+
+// our-friends properties
+
+.our-friends {
+    background-color: $color-light-l;
+    margin-top: 120px;
+}
+
+.our-friends .wrapper {
+    max-width: 1200px;
+    min-height: 1342px;
+    margin: 0 auto;
+}
+
+.our-friends__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slides-panel {
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.our-friends__content-title {
+    @include h3;
+    color: $color-dark-l;
+    width: 400px;
+    text-align: center;
+    padding: 81px 0 0 2px;
+}
+
+.card-item {
+    margin-top: 30px;
+    width: 270px;
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-light-s;
+    border-radius: 9px;
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(to  bottom, $color-light-s 62%, $color-light-xl 62%);
+    }
+}
+
+.card-item__name {
+    @include card-name;
+    margin-top: 30px;
+    padding-left: 2px;
+}
+
+.button {
+    @include button;
+    border: 2px solid $color-primary; 
+    border-radius: 100px;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light; 
+    }
+}
+
+.buttons-panel {
+    margin-top: 60px;
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-item__button {
+    margin-top: 30px;
+    width: 187px;
+    padding: 13px 40px;
+    background-color: $color-light-xl;
+}
+
+.to-begining, .slide-left {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-dark-s;
+}
+
+.slide-right, .to-end {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-primary;
+    &:hover {
+        background-color: $color-primary-light;
+        cursor: pointer;
+        border: 2px solid $color-primary-light; 
+    }
+}
+
+.current-page {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-page__number {
+    @include h4;
+    color: $color-dark-3xl;
+    padding: 0 0 3px 1px;
+}
+
+.slide-left {
+    background: url('../../assets/images/pets-slide-left.svg') no-repeat center center; 
+}
+
+.slide-right {
+    background: url('../../assets/images/pets-slide-right.svg') no-repeat center center; 
+}
+
+.to-begining {
+    background: url('../../assets/images/to-begining.svg') no-repeat center center; 
+}
+
+.to-end {
+    background: url('../../assets/images/to-end.svg') no-repeat center center; 
+}
+
+@media screen and (max-width: 768px) {
+    .our-friends__content-title {
+        padding: 71px 0 0 2px;
+    }
+
+    .our-friends .wrapper {
+        max-width: 580px;
+        min-height: 1365px;
+        margin: 0 auto;
+    }
+
+    .slides-panel {
+        margin-top: 9px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card-item:nth-of-type(7), .card-item:last-of-type {
+        display: none;
+    }
+
+    .buttons-panel {
+        margin-top: 40px;
+        padding-bottom: 76px;
+    }
+}
+
+// footer properties
+
+.footer {
+    width: 100%;
+    background: url('../../assets/images/noise_transparent.svg'), $footer-gradient;
+}
+
+.footer .wrapper {
+    max-width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.layout-3-column {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content__title {
+    @include h3;
+    width: 300px;
+    color: $color-light-xl;
+}
+
+.email, .phone, .address {
+    display: flex;
+    align-items: center;
+    padding-top: 39px;
+}
+
+.phone {
+    padding-top: 40px;
+}
+
+.email__address, .phone__number, .address__location {
+    @include h4;
+    text-decoration: none;
+    padding-left: 20px;
+    color: $color-primary;
+}
+
+.footer-content {
+    padding-top: 57px;
+}
+
+.image-container {
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.address {
+    width: 302px;
+    padding-top: 33px;
+}
+
+.address-content {
+    margin-left: -19px;
+} 
+
+@media screen and (max-width: 768px) {
+    .footer .wrapper {
+        max-width: 100vw;
+        height: 639px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .layout-3-column {
+        max-width: 640px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-between;    
+    }
+
+    .footer-content {
+        padding-top: 31px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .address-content .footer-content__title {
+        padding-left: 1px;
+    }
+
+    .address-content .address:first-of-type {
+        padding-top: 32px;
+    }
+}

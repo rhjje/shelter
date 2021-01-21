@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+$color-light-xl: #FFFFFF;
+$color-light-l: #F6F6F6;
+$color-light-s: #FAFAFA;
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$color-dark-xl: #4C4C4C;
+$color-dark-2xl: #444444;
+$color-dark-3xl: #292929;
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$start-screen-gradient-background: #FFFFFF;
+$color-light-xl: #FFFFFF;
+$start-screen-gradient: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+$footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+@mixin h2 {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 4.4rem;
+      style: normal;
+  }
+  line-height: 130%;
+  color: $color-light-xl;
+}
+
+@mixin h3 {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 3.5rem;
+      style: normal;
+  }
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+}
+
+@mixin h3-mobile {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 2.5rem;
+      style: normal;
+  }
+  line-height: 130%;
+  letter-spacing: 0.16rem;
+}
+
+@mixin h4 {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 2rem;
+      style: normal;
+  }
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  color: $color-primary;
+}
+
+@mixin h5 {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 1.5rem;
+      style: normal;
+  }
+  line-height: 110%;
+  letter-spacing: 0.09rem;
+}
+
+@mixin h5-modal-window {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 1.5rem;
+      style: normal;
+  }
+  line-height: 190%;
+  letter-spacing: 0.09rem;
+}
+
+@mixin paragraph-l {
+  font: {
+      family: Arial;
+      weight: normal;
+      size: 1.5rem;
+      style: normal;
+  }
+  line-height: 160%;
+}
+
+@mixin paragraph-s {
+  font: {
+      family: Arial;
+      weight: normal;
+      size: 1.2rem;
+      style: italic;
+  }
+  line-height: 150%;
+  color: $color-dark-m;
+}
+
+@mixin paragraph-mobile-menu {
+  font: {
+      family: Arial;
+      weight: normal;
+      size: 3.2rem;
+      style: normal;
+  }
+  line-height: 5.12rem;
+  color: $color-dark-s;
+}
+
+@mixin logo_title {
+  font: {
+      family: Georgia;
+      weight: normal;
+      size: 3.2rem;
+      style: normal;
+  }
+  line-height: 110%;
+  letter-spacing: 0.02rem;
+  color: $color-primary;
+}
+
+@mixin logo_subtitle {
+  font: {
+      family: Arial;
+      weight: normal;
+      size: 1.3rem;
+      style: normal;
+  }
+  line-height: 110%;
+  letter-spacing: 0.13rem;
+  color: $color-light-xl;
+}
+
+@import './header';
+@import './main';
+@import './about';
+@import './pets';
+@import './help-us';
+@import './donation';
+@import './footer';

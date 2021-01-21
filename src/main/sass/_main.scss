@@ -1,0 +1,58 @@
+.main {
+  background: url('../assets/images/background.png'), $start-screen-gradient;
+}
+
+.main .wrapper {
+  width: 1200px;
+  height: 908px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.main__content-container {
+  width: 460px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 243px;
+}
+
+.main__title {
+  width: 310px;
+  @include h2;
+}
+
+.main__description {
+  @include paragraph-l;
+  color: $color-dark-s;
+}
+
+.button_colored {
+  width: 207px;
+  height: 52px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  letter-spacing: 0.01rem;
+  color: $color-dark-3xl;
+  background-color: $color-primary;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-light;
+  }
+}
+
+.main__image {
+  width: 698px;
+  height: 728px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

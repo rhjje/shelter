@@ -1,0 +1,54 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+}
+
+.header .wrapper {
+  max-width: 1200px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.heading {
+  width: 184px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include logo_title;
+}
+
+.heading_description {
+  @include logo_subtitle;
+}
+
+.navigation {
+  width: 445px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  list-style-type: none;
+  display: inline-block;
+  a {
+    text-decoration: none;
+    @include paragraph-l;
+    color: $color-dark-s;
+  }
+}
+
+.navigation__item_active {
+  border-bottom: 3px solid $color-primary;
+  a {
+    color: $color-light-s;
+  }
+}

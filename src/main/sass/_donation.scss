@@ -1,0 +1,70 @@
+.donation {
+  height: 462px;
+  background-color: $color-light-l;
+  padding-top: 80px;
+}
+
+.donation .wrapper {
+  max-width: 915px;
+  height: 282px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation__image {
+  width: 505px;
+  height: 261px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.donation__content-container {
+  width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.requisites {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.requisites__description {
+  @include h5;
+  color: $color-dark-l;
+}
+
+.bank-account {
+  width: 350px;
+  height: 43px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+}
+
+.bank-account__image {
+  margin: 0 15px;
+}
+
+.bank-account__number {
+  @include h4;
+  color: $color-dark-l;
+}
+
+.requisites__note {
+  font-family: Arial;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: $color-dark-m;
+}

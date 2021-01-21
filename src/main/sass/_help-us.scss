@@ -1,0 +1,44 @@
+.help-us {
+  height: 611px;
+  padding-top: 80px;
+}
+
+.help-us .wrapper {
+  width: 1200px;
+  height: 431px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help-us .subtitle {
+  width: 315px;
+  text-align: center;
+}
+
+.subjects {
+  width: 1030px;
+  height: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  row-gap: 55px;
+  align-items: center;
+  justify-content: center;
+}
+
+.subject {
+  height: 113px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject__title {
+  @include h4;
+  color: $color-dark-l;
+}

@@ -1,0 +1,99 @@
+.pets {
+  background-color: $color-light-l;
+  height: 877px;
+  padding-top: 80px;
+}
+
+.pets .wrapper {
+  width: 1200px;
+  height: 697px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-left, .slide-right {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid $color-primary;
+  background-color: $color-light-l;
+  font-size: 2rem;
+  padding-bottom: 4px;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+}
+
+.cards {
+  display: flex;
+  column-gap: 90px;
+}
+
+.card {
+  width: 270px;
+  height: 435px;
+  background-color: $color-light-s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-xl;
+  }
+}
+
+.card__image {
+  width: 270px;
+  height: 270px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card__name {
+  margin: 30px 0;
+  color: $color-dark-l;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.27rem;
+  letter-spacing: 0.01rem;
+}
+
+.card_button {
+  width: 187px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid $color-primary;
+  background-color: $color-light-s;
+  outline: none;
+  color: $color-dark-3xl;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.27rem;
+  letter-spacing: 0.01rem;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+}
+
+.pets__button {
+  width: 261px;
+}

@@ -41,6 +41,7 @@ $footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1
   }
   line-height: 130%;
   letter-spacing: 0.21rem;
+  color: $color-dark-l;
 }
 
 @mixin h3-mobile {
@@ -63,7 +64,6 @@ $footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1
   }
   line-height: 115%;
   letter-spacing: 0.12rem;
-  color: $color-primary;
 }
 
 @mixin h5 {
@@ -96,6 +96,7 @@ $footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1
       style: normal;
   }
   line-height: 160%;
+  color: $color-dark-xl;
 }
 
 @mixin paragraph-s {

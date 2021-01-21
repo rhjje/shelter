@@ -8,17 +8,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const RemovePlugin = require('remove-files-webpack-plugin');
 
-
 module.exports = () => {
-
   const config = {
     devtool: 'inline-source-map',
     entry: {
-      main: [path.resolve(__dirname, './src/js/index.js'), './src/sass/style.scss']
+      'main/main': [path.resolve(__dirname, './src/main/js/index.js'), './src/main/sass/styles.scss'],
+      'pets/pets': [path.resolve(__dirname, './src/pets/js/index.js'), './src/pets/sass/styles.scss'],
     },
     output: {
-      filename: 'script.js',
-      path: path.resolve(__dirname, './dist'),
+      filename: '[name].js',
+      path: path.resolve(__dirname, './dist/'),
       assetModuleFilename: './assets/[name][ext]',
     },
     module: {
@@ -68,17 +67,24 @@ module.exports = () => {
     plugins: [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: 'style.css',
+        filename: '[name].css',
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/html/index.html'),
-        filename: 'index.html',
-        favicon: './src/assets/icons/favicon.ico',
+        template: path.resolve(__dirname, './src/main/html/index.html'),
+        filename: '/main/main.html',
+        chunks: [''],
+        // favicon: './src/main/assets/icons/favicon.ico',
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, './src/pets/html/pets.html'),
+        filename: '/pets/pets.html',
+        chunks: [''],
+        // favicon: './src/main/assets/icons/favicon.ico',
       }),
       new CopyPlugin({
         patterns: [
-          { from: 'src/assets/images', to: 'assets/images' },
-          { from: 'src/assets/icons', to: 'assets/icons' },
+          { from: 'src/main/assets/images', to: 'main/assets/images' },
+          { from: 'src/main/assets/icons', to: 'main/assets/icons' },
         ],
       }),
       new RemovePlugin({

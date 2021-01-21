@@ -1,0 +1,34 @@
+.about .wrapper {
+  max-width: 850px;
+  height: 588px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__image {
+  width: 300px;
+  height: 408px;
+  margin-top: 80px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about__content-container {
+  width: 430px;
+  height: 380px;
+  margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subtitle {
+  @include h3;
+}
+
+.about__description {
+  @include paragraph-l;
+}

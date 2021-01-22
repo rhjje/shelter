@@ -28,8 +28,9 @@
   outline: none;
   border: 2px solid $color-primary;
   background-color: $color-light-l;
-  font-size: 2rem;
-  padding-bottom: 4px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 2px;
   &:hover {
     cursor: pointer;
     background-color: $color-primary;
@@ -72,7 +73,7 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.27rem;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.1rem;
 }
 
 .card_button {
@@ -87,7 +88,7 @@
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 2.27rem;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.1rem;
   &:hover {
     cursor: pointer;
     background-color: $color-primary;
@@ -96,4 +97,8 @@
 
 .pets__button {
   width: 261px;
+}
+
+.pets .subtitle {
+  text-align: center;
 }

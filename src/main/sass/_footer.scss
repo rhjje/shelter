@@ -14,6 +14,7 @@
 
 .contacts {
   width: 280px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
@@ -40,9 +41,10 @@
 
 .addresses {
   width: 302px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 35px;
 }
 
 .footer__image {

@@ -7,6 +7,7 @@
   height: 908px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -39,7 +40,7 @@
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 2.21rem;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.1rem;
   color: $color-dark-3xl;
   background-color: $color-primary;
   &:hover {

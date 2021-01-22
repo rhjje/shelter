@@ -16,7 +16,6 @@
 .donation__image {
   width: 505px;
   height: 261px;
-
   img {
     width: 100%;
     height: auto;
@@ -71,4 +70,70 @@
 
 .donation .subtitle {
   width: 300px;
+}
+
+@media screen and (max-width: 1279px) {
+  .donation {
+    height: 783px;
+  }
+
+  .donation .wrapper {
+    width: 505px;
+    height: 603px;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .donation {
+    height: 542px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .donation .wrapper {
+    width: 300px;
+    height: 458px;
+  }
+
+  .donation__image {
+    width: 260px;
+    height: 135px;
+  }
+
+  .donation__content-container {
+    width: 300px;
+    height: 281px;
+  }
+
+  .donation .subtitle {
+    width: 230px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .requisites__description {
+    width: 273px;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    letter-spacing: 0;
+    margin: 0 auto;
+  }
+
+  .bank-account {
+    margin: 0 auto;
+    width: 281px;
+  }
+
+  .bank-account__number {
+    @include h5;
+  }
+
+  .requisites__note {
+    margin: 0 auto;
+    width: 280px;
+    text-align: justify;
+  }
 }

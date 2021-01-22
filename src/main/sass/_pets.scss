@@ -102,3 +102,68 @@
 .pets .subtitle {
   text-align: center;
 }
+
+.card__disabled {
+  display: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .pets .wrapper {
+    width: 708px;
+  }
+
+  .slider {
+    width: 708px;
+  }
+
+  .cards {
+    column-gap: 40px;
+  }
+
+  .card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pets {
+    height: 791px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .pets .wrapper {
+    width: 300px;
+    height: 707px;
+  }
+
+  .card:nth-child(2) {
+    display: none;
+  }
+
+  .slider {
+    width: 270px;
+    height: 507px;
+    display: grid;
+    grid-template-columns: 135px 135px;
+    grid-template-rows: 435px 72px;
+  }
+  
+  .cards {
+   grid-column: 1 / span 2;
+   grid-row: 0 / 1;
+  }
+
+  .slide-left {
+    grid-column: 0 / span 1;
+    grid-row: 2 / 3;
+    align-self: flex-end;
+    justify-self: center;
+  }
+
+  .slide-right {
+    align-self: flex-end;
+    justify-self: center;
+  }
+}

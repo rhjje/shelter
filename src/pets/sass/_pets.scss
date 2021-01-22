@@ -1,0 +1,132 @@
+.pets {
+  margin-top: 120px;
+  height: 1342px;
+  background-color: $color-light-l;
+  padding-top: 80px;
+}
+
+.pets .wrapper {
+  width: 1200px;
+  height: 1162px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  @include h3;
+  color: $color-dark-l;
+  text-align: center;
+}
+
+.cards {
+  width: 1200px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+.card {
+  width: 270px;
+  height: 435px;
+  background-color: $color-light-s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-light-xl;
+  }
+}
+
+.card__image {
+  width: 270px;
+  height: 270px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card__name {
+  margin: 30px 0;
+  color: $color-dark-l;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.27rem;
+  letter-spacing: 0.1rem;
+}
+
+.card_button {
+  width: 187px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid $color-primary;
+  background-color: $color-light-s;
+  outline: none;
+  color: $color-dark-3xl;
+  font-family: Georgia;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 2.27rem;
+  letter-spacing: 0.1rem;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+}
+
+.control-panel {
+  width: 340px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-beginning,
+.slide-left, 
+.slide-right,
+.to-end {
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid $color-primary;
+  background-color: $color-light-l;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary;
+  }
+}
+
+.current-page {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-page__number {
+  @include h4;
+}
+
+.button_disabled {
+  border: 2px solid $color-dark-s;
+  pointer-events: none;
+}

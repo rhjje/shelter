@@ -2,4 +2,119 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
+
+$color-light-xl: #FFFFFF;
+$color-light-l: #F6F6F6;
+$color-light-s: #FAFAFA;
+$color-dark-s: #CDCDCD;
+$color-dark-l: #545454;
+$color-dark-3xl: #292929;
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+@mixin logo_title {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 32px;
+        style: normal;
+    }
+    line-height: 110%;
+    letter-spacing: 2px;
+    color: $color-dark-l;
+}
+
+@mixin logo_subtitle {
+    font: {
+        family: Arial;
+        weight: normal;
+        size: 13px;
+        style: normal;
+    }
+    line-height: 110%;
+    letter-spacing: 1.3px;
+    color: $color-dark-3xl;
+}
+
+@mixin paragraph-l {
+    font: {
+        family: Arial;
+        weight: normal;
+        size: 15px;
+        style: normal;
+    }
+    line-height: 160%;
+}
+
+@mixin h3 {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 35px;
+        style: normal;
+    }
+    line-height: 130%;
+    letter-spacing: 2.1px;
+}
+
+@mixin h3-mobile {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 25px;
+        style: normal;
+    }
+    line-height: 130%;
+    letter-spacing: 1.6px;
+}
+
+@mixin h4 {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 20px;
+        style: normal;
+    }
+    line-height: 115%;
+    letter-spacing: 1.2px;
+}
+
+@mixin h5 {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 15px;
+        style: normal;
+    }
+    line-height: 110%;
+    letter-spacing: 0.9px;
+}
+
+@mixin h5-modal-window {
+    font: {
+        family: Georgia;
+        weight: normal;
+        size: 15px;
+        style: normal;
+    }
+    line-height: 190%;
+    letter-spacing: 0.9px;
+}
+
+@mixin paragraph-mobile-menu {
+    font: {
+        family: Arial;
+        weight: normal;
+        size: 32px;
+        style: normal;
+    }
+    line-height: 51.2px;
+    color: $color-dark-s;
+}
+
+@import './header';
+@import './pets';
+@import './footer';

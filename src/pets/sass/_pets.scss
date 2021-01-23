@@ -130,3 +130,67 @@
   border: 2px solid $color-dark-s;
   pointer-events: none;
 }
+
+@media screen and (max-width: 1279px) {
+  .pets {
+    height: 1733px;
+  }
+
+  .pets .wrapper {
+    width: 580px;
+    height: 1603px;
+    justify-content: flex-start;
+  }
+
+  .cards {
+    width: 580px;
+    height: 1365px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .card:nth-child(7),
+  .card:nth-child(8) {
+    display: none;
+  }
+
+  .control-panel {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pets {
+    height: 1649px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .pets .wrapper {
+    width: 300px;
+    height: 1565px;
+    justify-content: space-between;
+  }
+  
+  .subtitle {
+    @include h3-mobile;
+  }
+
+  .cards {
+    width: 270px;
+    height: 1365px;
+    margin-top: 0;
+  }
+
+  .card:nth-child(4),
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
+  }
+
+  .control-panel {
+    width: 300px;
+    margin-top: 0;
+  }
+}

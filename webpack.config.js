@@ -85,8 +85,10 @@ module.exports = () => {
         patterns: [
           { from: 'src/main/assets/images', to: 'main/assets/images' },
           { from: 'src/main/assets/icons', to: 'main/assets/icons' },
+          { from: 'src/main/assets/json', to: 'main/assets/json' },
           { from: 'src/pets/assets/images', to: 'pets/assets/images' },
           { from: 'src/pets/assets/icons', to: 'pets/assets/icons' },
+          { from: 'src/pets/assets/json', to: 'pets/assets/json' },
         ],
       }),
       new RemovePlugin({

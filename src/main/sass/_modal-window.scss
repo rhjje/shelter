@@ -1,0 +1,112 @@
+.modal-window {
+  position: fixed;
+  width: 900px;
+  height: 500px;
+  background-color: $color-light-s;
+  top: calc(50vh - 250px);
+  left: calc(50vw - 450px);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  z-index: 3;
+  opacity: 1;
+  transition: .5s;
+  visibility: visible;
+}
+
+.modal-window__image {
+  width: 500px;
+  height: 500px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.information {
+  margin-top: 50px;
+  margin-left: 30px;
+  width: 350px;
+  height: 362px;
+}
+
+.information__name {
+  @include h3;
+  color: $color-black;
+}
+
+.information__type-pets {
+  margin-top: 10px;
+  @include h4;
+  color: $color-black;
+}
+
+.information__description {
+  height: 102px;
+  margin-top: 40px;
+  @include h5;
+  color: $color-black;
+  line-height: 17px;
+}
+
+.information__extra {
+  margin-top: 35px;
+  list-style-type: none;
+}
+
+.information__extra-item {
+  b {
+    @include h5-modal-window;
+    font-weight: bold;
+  }
+  @include h5-modal-window;
+}
+
+.information__extra-item::before {
+  color: $color-primary; 
+  content: "•"; 
+  padding-right: 10px;
+}
+
+.close-modal {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  outline: none;
+  font-weight: bold;
+  font-size: 2rem;
+  position: fixed;
+  top: calc(50vh - 302px);
+  left: calc(50vw + 450px);
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  transition: .2s;
+  &:hover {
+    cursor: pointer;
+    transition: 0;
+    background-color: $color-primary;
+  }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-3xl;
+  z-index: 2;
+  opacity: 0.6;
+  transition: .5s;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modal-window_closed {
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}

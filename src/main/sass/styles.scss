@@ -5,6 +5,7 @@
   font-size: 10px;
 }
 
+$color-black: #000000;
 $color-light-xl: #FFFFFF;
 $color-light-l: #F6F6F6;
 $color-light-s: #FAFAFA;
@@ -152,3 +153,4 @@ $footer-gradient: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1
 @import './help-us';
 @import './donation';
 @import './footer';
+@import './modal-window';

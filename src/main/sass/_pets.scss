@@ -40,9 +40,13 @@
 .cards {
   display: flex;
   column-gap: 90px;
+  width: 990px;
+  overflow: hidden;
+  position: relative;
 }
 
 .card {
+  flex-shrink: 0;
   width: 270px;
   height: 435px;
   background-color: $color-light-s;
@@ -51,6 +55,8 @@
   align-items: center;
   border-radius: 9px;
   overflow: hidden;
+  // transition: 1s;
+  // transform: translateX(-1080px);
   &:hover {
     cursor: pointer;
     background-color: $color-light-xl;
@@ -117,6 +123,7 @@
   }
 
   .cards {
+    width: 580px;
     column-gap: 40px;
   }
 
@@ -151,8 +158,9 @@
   }
   
   .cards {
-   grid-column: 1 / span 2;
-   grid-row: 0 / 1;
+    width: 270px;
+    grid-column: 1 / span 2;
+    grid-row: 0 / 1;
   }
 
   .slide-left {

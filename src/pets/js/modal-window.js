@@ -24,10 +24,10 @@ const renderModalWindow = (name) => {
     <div class="information__type-pets">${pet.type} - ${pet.breed}</div>
     <div class="information__description">${pet.description}</div>
     <ul class="information__extra">
-      <li class="information__extra-item"><b>Age:</b> ${pet.age}</li>
-      <li class="information__extra-item"><b>Inoculations:</b> ${pet.inoculations}</li>
-      <li class="information__extra-item"><b>Diseases:</b> ${pet.diseases}</li>
-      <li class="information__extra-item"><b>Parasites:</b> ${pet.parasites}</li>
+      <li class="information__extra-item"><b>Age:</b> <span>${pet.age}</span></li>
+      <li class="information__extra-item"><b>Inoculations:</b> <span>${pet.inoculations}</span></li>
+      <li class="information__extra-item"><b>Diseases:</b> <span>${pet.diseases}</span></li>
+      <li class="information__extra-item"><b>Parasites:</b> <span>${pet.parasites}</span></li>
     </ul>`;
 
   modalWindowContainer.classList.remove('modal-window_closed');

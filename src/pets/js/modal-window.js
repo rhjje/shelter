@@ -1,4 +1,3 @@
-const cards = document.querySelectorAll('.card_button');
 const modalWindowContainer = document.querySelector('.modal-window');
 const closeModalButton = document.querySelector('.close-modal');
 const backgroundModal = document.querySelector('.modal-background');
@@ -41,12 +40,6 @@ fetch('./assets/json/pets.json')
     pets = result;
   });
 
-cards.forEach((card) => {
-  card.addEventListener('click', () => {
-    renderModalWindow(card.getAttribute('data-name'));
-  });
-});
-
 closeModalButton.addEventListener('click', () => {
   modalWindowContainer.classList.add('modal-window_closed');
   closeModalButton.classList.add('modal-window_closed');
@@ -56,3 +49,5 @@ closeModalButton.addEventListener('click', () => {
 backgroundModal.addEventListener('click', () => {
   closeModalButton.click();
 });
+
+export default renderModalWindow;

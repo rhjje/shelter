@@ -4,17 +4,22 @@ const toBeginning = document.querySelector('.to-beginning');
 const toEnd = document.querySelector('.to-end');
 const slideLeft = document.querySelector('.slide-left');
 const slideRight = document.querySelector('.slide-right');
-const currentPage = document.querySelector('.current-page');
+const page = document.querySelector('.current-page__number');
 
 let pets;
 let numbersOfCards;
+let currentPage = 1;
+let maxNumberPage;
 
 if (window.innerWidth > 1279) {
   numbersOfCards = 8;
+  maxNumberPage = 6;
 } else if (window.innerWidth > 767) {
   numbersOfCards = 6;
+  maxNumberPage = 8;
 } else {
   numbersOfCards = 3;
+  maxNumberPage = 16;
 }
 
 class Card {
@@ -56,8 +61,72 @@ const renderCards = () => {
   });
 };
 
+const setSettingsControlPanel = () => {
+  if (currentPage === 1) {
+    toBeginning.classList.add('button_disabled');
+    toBeginning.setAttribute('disabled', true);
+    slideLeft.classList.add('button_disabled');
+    slideLeft.setAttribute('disabled', true);
+
+    toEnd.classList.remove('button_disabled');
+    toEnd.removeAttribute('disabled');
+    slideRight.classList.remove('button_disabled');
+    slideRight.removeAttribute('disabled');
+  } else if (currentPage === maxNumberPage) {
+    toBeginning.classList.remove('button_disabled');
+    toBeginning.removeAttribute('disabled');
+    slideLeft.classList.remove('button_disabled');
+    slideLeft.removeAttribute('disabled');
+
+    toEnd.classList.add('button_disabled');
+    toEnd.setAttribute('disabled', true);
+    slideRight.classList.add('button_disabled');
+    slideRight.setAttribute('disabled', true);
+  } else {
+    toBeginning.classList.remove('button_disabled');
+    toBeginning.removeAttribute('disabled');
+    slideLeft.classList.remove('button_disabled');
+    slideLeft.removeAttribute('disabled');
+
+    toEnd.classList.remove('button_disabled');
+    toEnd.removeAttribute('disabled');
+    slideRight.classList.remove('button_disabled');
+    slideRight.removeAttribute('disabled');
+  }
+};
+
 slideRight.addEventListener('click', () => {
+  if (currentPage < maxNumberPage) {
+    currentPage += 1;
+    page.innerText = currentPage;
+    renderCards();
+  }
+
+  setSettingsControlPanel();
+});
+
+slideLeft.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage -= 1;
+    page.innerText = currentPage;
+    renderCards();
+  }
+
+  setSettingsControlPanel();
+});
+
+toBeginning.addEventListener('click', () => {
+  currentPage = 1;
+  page.innerText = 1;
   renderCards();
+  setSettingsControlPanel();
+});
+
+toEnd.addEventListener('click', () => {
+  currentPage = maxNumberPage;
+  page.innerText = maxNumberPage;
+  renderCards();
+  setSettingsControlPanel();
 });
 
 fetch('./assets/json/pets.json')
@@ -68,8 +137,26 @@ fetch('./assets/json/pets.json')
   });
 
 window.addEventListener('resize', (event) => {
-  console.log(event.target.innerWidth);
+  let currentNumbersOfCards;
+  let currentMaxNumberPage;
+
+  if (event.target.innerWidth > 1279) {
+    currentNumbersOfCards = 8;
+    currentMaxNumberPage = 6;
+  } else if (event.target.innerWidth > 767) {
+    currentNumbersOfCards = 6;
+    currentMaxNumberPage = 8;
+  } else {
+    currentNumbersOfCards = 3;
+    currentMaxNumberPage = 16;
+  }
+
+  if (currentNumbersOfCards !== numbersOfCards) {
+    numbersOfCards = currentNumbersOfCards;
+    maxNumberPage = currentMaxNumberPage;
+    currentPage = 1;
+    page.innerText = 1;
+    setSettingsControlPanel();
+    renderCards();
+  }
 });
-
-console.log(window.innerWidth);
-

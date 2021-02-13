@@ -133,7 +133,10 @@
 }
 
 .current-page__number {
-  @include h4;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 2rem;
+  user-select: none;
 }
 
 .button_disabled {
@@ -172,11 +175,6 @@
     flex-wrap: wrap;
   }
 
-  .card:nth-child(7),
-  .card:nth-child(8) {
-    display: none;
-  }
-
   .control-panel {
     margin-top: 40px;
   }
@@ -206,12 +204,6 @@
     width: 270px;
     height: 1365px;
     margin-top: 0;
-  }
-
-  .card:nth-child(4),
-  .card:nth-child(5),
-  .card:nth-child(6) {
-    display: none;
   }
 
   .control-panel {

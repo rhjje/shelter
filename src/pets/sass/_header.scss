@@ -57,6 +57,7 @@
 .navigation__item {
   list-style-type: none;
   display: inline-block;
+
   a {
     text-decoration: none;
     @include paragraph-l;
@@ -66,9 +67,15 @@
 
 .navigation__item_active {
   border-bottom: 3px solid $color-primary;
+
   a {
     color: $color-dark-3xl;
   }
+}
+
+.navigation__item:nth-child(3),
+.navigation__item:nth-child(4) {
+  pointer-events: none;
 }
 
 .menu-icon {
@@ -76,10 +83,12 @@
   height: 22px;
   transform: rotate(0deg);
   transition: .6s;
+
   &:hover {
     cursor: pointer;
   }
 }
+
 .menu-icon_open {
   transform: rotate(90deg);
   transition: .6s;

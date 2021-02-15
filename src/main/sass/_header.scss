@@ -62,6 +62,11 @@
   }
 }
 
+.navigation__item:nth-child(3),
+.navigation__item:nth-child(4) {
+  pointer-events: none;
+}
+
 .side-menu {
   display: none;
   position: relative;

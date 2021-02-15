@@ -43,6 +43,7 @@
   width: 990px;
   overflow: hidden;
   position: relative;
+  overflow: visible;
 }
 
 .card {
@@ -55,11 +56,13 @@
   align-items: center;
   border-radius: 9px;
   overflow: hidden;
-  // transition: 1s;
-  // transform: translateX(-1080px);
+  transition: .3s;
   &:hover {
     cursor: pointer;
     background-color: $color-light-xl;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.8);
+    transition: .3s;
+    overflow: visible;
   }
 }
 

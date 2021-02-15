@@ -40,9 +40,12 @@
   overflow: hidden;
   animation-name: fade-in;
   animation-duration: .5s;
+  transition: .3s;
   &:hover {
     cursor: pointer;
     background-color: $color-light-xl;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.8);
+    transition: .3s;
   }
 }
 

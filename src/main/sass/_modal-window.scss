@@ -1,5 +1,19 @@
 .modal-window {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.5);
+  z-index: 2;
+  transition: .5s;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modal-window__dialog {
+  position: fixed;
   width: 900px;
   height: auto;
   background-color: $color-light-s;
@@ -12,6 +26,9 @@
   opacity: 1;
   transition: .5s;
   visibility: visible;
+  &:hover {
+    cursor: default;
+  }
 }
 
 .modal-window__image {

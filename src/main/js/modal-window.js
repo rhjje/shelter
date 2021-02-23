@@ -1,12 +1,12 @@
 const cards = document.querySelectorAll('.card_button');
 const modalWindowContainer = document.querySelector('.modal-window');
+const modalWindow = document.querySelector('.modal-window__dialog');
 const closeModalButton = document.querySelector('.close-modal');
-const backgroundModal = document.querySelector('.modal-background');
 let pets;
 
 const renderModalWindow = (name) => {
-  while (modalWindowContainer.firstChild) {
-    modalWindowContainer.removeChild(modalWindowContainer.firstChild);
+  while (modalWindow.firstChild) {
+    modalWindow.removeChild(modalWindow.firstChild);
   }
 
   let pet;
@@ -16,7 +16,7 @@ const renderModalWindow = (name) => {
     }
   });
 
-  modalWindowContainer.innerHTML = `<div class="modal-window__image">
+  modalWindow.innerHTML = `<div class="modal-window__image">
     <img src="${pet.img}" alt="Pets">
   </div>
   <div class="information">
@@ -32,7 +32,7 @@ const renderModalWindow = (name) => {
 
   modalWindowContainer.classList.remove('modal-window_closed');
   closeModalButton.classList.remove('modal-window_closed');
-  backgroundModal.classList.remove('modal-window_closed');
+  modalWindow.classList.remove('modal-window_closed');
   document.body.style.overflowY = 'hidden';
 };
 
@@ -50,10 +50,15 @@ cards.forEach((card) => {
 
 const hideModalWindow = () => {
   modalWindowContainer.classList.add('modal-window_closed');
+  modalWindow.classList.add('modal-window_closed');
   closeModalButton.classList.add('modal-window_closed');
-  backgroundModal.classList.add('modal-window_closed');
   document.body.style.overflowY = '';
 };
 
+modalWindowContainer.addEventListener('click', (event) => {
+  if (event.target === modalWindowContainer) {
+    hideModalWindow();
+  }
+});
+
 closeModalButton.addEventListener('click', hideModalWindow);
-backgroundModal.addEventListener('click', hideModalWindow);

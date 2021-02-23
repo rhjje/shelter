@@ -33,6 +33,7 @@ const renderModalWindow = (name) => {
   modalWindowContainer.classList.remove('modal-window_closed');
   closeModalButton.classList.remove('modal-window_closed');
   backgroundModal.classList.remove('modal-window_closed');
+  document.body.style.overflowY = 'hidden';
 };
 
 fetch('./assets/json/pets.json')
@@ -47,12 +48,12 @@ cards.forEach((card) => {
   });
 });
 
-closeModalButton.addEventListener('click', () => {
+const hideModalWindow = () => {
   modalWindowContainer.classList.add('modal-window_closed');
   closeModalButton.classList.add('modal-window_closed');
   backgroundModal.classList.add('modal-window_closed');
-});
+  document.body.style.overflowY = '';
+};
 
-backgroundModal.addEventListener('click', () => {
-  closeModalButton.click();
-});
+closeModalButton.addEventListener('click', hideModalWindow);
+backgroundModal.addEventListener('click', hideModalWindow);

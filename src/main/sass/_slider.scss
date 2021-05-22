@@ -1,0 +1,25 @@
+.slider__wrapper {
+  width: 990px;
+  height: 435px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__visible-area {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -990px;
+  width: 10000px;
+  height: 435px;
+}
+
+.cards {
+  display: flex;
+  column-gap: 90px;
+  width: 990px;
+}
+
+.shifting {
+  transition: left .7s ease-out;
+}

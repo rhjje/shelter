@@ -125,7 +125,7 @@
 }
 
 @media screen and (max-width: 1279px) {
-  .modal-window {
+  .modal-window__dialog {
     width: 630px;
     height: 350px;
     top: calc(50vh - 175px);
@@ -163,7 +163,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .modal-window {
+  .modal-window__dialog {
     width: 240px;
     height: auto;
     top: calc(50vh - 170px);

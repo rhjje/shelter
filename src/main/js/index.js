@@ -1,4 +1,4 @@
-import burgerMenu from './burger-menu';
+import burgerMenu from './modules/burger-menu';
 import modals from './modules/modals';
 import slider from './slider';
 

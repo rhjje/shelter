@@ -37,6 +37,7 @@
   .burger-menu__navigation-item {
     list-style-type: none;
     a {
+      white-space: nowrap;
       text-decoration: none;
       @include paragraph-mobile-menu;
       color: $color-dark-s;

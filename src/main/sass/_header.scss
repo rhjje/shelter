@@ -31,6 +31,7 @@
 
 .title,
 .burger-menu__title {
+  white-space: nowrap;
   @include logo_title;
 }
 

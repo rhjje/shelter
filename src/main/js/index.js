@@ -1,3 +1,7 @@
 import burgerMenu from './burger-menu';
-import modalWindow from './modal-window';
+import modals from './modules/modals';
 import slider from './slider';
+
+document.addEventListener('DOMContentLoaded', () => {
+  modals('.card_button', '.modal-window', '.modal-window__dialog', '.close-modal');
+});

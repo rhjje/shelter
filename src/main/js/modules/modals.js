@@ -1,4 +1,4 @@
-const calcScroll = () => {
+export const calcScroll = () => {
   const div = document.createElement('div');
   div.style.overflowY = 'scroll';
   div.style.visibility = 'hidden';

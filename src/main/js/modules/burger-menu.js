@@ -1,22 +1,23 @@
-const burgerButton = document.querySelector('.menu-icon');
-const burgerMenu = document.querySelector('.burger-menu');
-const heading = document.querySelector('.heading');
-const burgerBackground = document.querySelector('.burger-background');
+const hamburger = (trigger, burger, bg) => {
+  const button = document.querySelector(trigger);
+  const menu = document.querySelector(burger);
+  const background = document.querySelector(bg);
 
-burgerButton.addEventListener('click', () => {
-  burgerButton.classList.toggle('menu-icon_open');
-  heading.classList.toggle('heading_disabled');
-  burgerBackground.classList.toggle('burger-background_closed');
+  button.addEventListener('click', () => {
+    button.classList.toggle('menu-icon_open');
+    background.classList.toggle('burger-background_closed');
+    document.querySelector('.heading').classList.toggle('heading_disabled');
 
-  if (burgerButton.classList.contains('menu-icon_open')) {
-    burgerMenu.style.transform = 'translateX(0px)';
-    document.body.style.overflowY = 'hidden';
-  } else {
-    document.body.style.overflowY = 'visible';
-    burgerMenu.style.transform = 'translateX(320px)';
-  }
-});
+    if (button.classList.contains('menu-icon_open')) {
+      menu.style.transform = 'translateX(0px)';
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = '';
+      menu.style.transform = 'translateX(320px)';
+    }
+  });
 
-burgerBackground.addEventListener('click', () => {
-  burgerButton.click();
-});
+  background.addEventListener('click', () => button.click());
+};
+
+export default hamburger;
